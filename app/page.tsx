@@ -122,8 +122,8 @@ function HeroTile() {
             color: "var(--ink-2)",
           }}
         >
-          developer + sysadmin in santa cruz. building agent infrastructure on
-          xrpl evm — mcp servers, cli tools, the deploy stack.
+          developer + sysadmin in santa cruz. building the deploy +
+          marketplace stack for ai agents on xrpl.
         </p>
         <div
           style={{
