@@ -321,13 +321,13 @@ function ProjectTile({
         </span>
       </div>
       <img
-        src={`/previews/${project.id}.jpg?v=2`}
+        src={`/previews/${project.id}.jpg?v=3`}
         alt={`${project.name} preview`}
         style={{
           height: featured ? 110 : 64,
           width: "100%",
           objectFit: "cover",
-          objectPosition: "center 35%",
+          objectPosition: "center",
           marginTop: 8,
           border: "1.25px solid var(--line)",
           borderRadius: 4,
