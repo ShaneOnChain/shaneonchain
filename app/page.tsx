@@ -32,10 +32,10 @@ const PROJECTS = [
 ];
 
 const FOCUS = [
-  "ai agents",
-  "mcp / cli tooling",
   "systems + networking",
-  "web3 / xrpl evm",
+  "identity + endpoints",
+  "mcp / cli tooling",
+  "ai agents · xrpl evm",
 ];
 
 // ─── Header (above the bento) ────────────────────────────────
@@ -65,15 +65,7 @@ function Header() {
         >
           s
         </div>
-        <div style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
-          <span className="mono" style={{ fontSize: 11 }}>shane on chain</span>
-          <span
-            className="mono"
-            style={{ fontSize: 9, color: "var(--ink-3)", marginTop: 2 }}
-          >
-            all · one · word
-          </span>
-        </div>
+        <span className="mono" style={{ fontSize: 12 }}>shane on chain</span>
       </div>
       <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
         <span className="mono" style={{ fontSize: 10, color: "var(--ink-3)" }}>
@@ -106,9 +98,33 @@ function HeroTile() {
           alignItems: "flex-start",
         }}
       >
-        <span className="tag">developer · santa cruz · ca</span>
-        <span className="mono" style={{ fontSize: 9, color: "var(--ink-3)" }}>
-          EST · 2024
+        <span className="tag">sysadmin · developer · santa cruz, ca</span>
+        <span
+          className="mono"
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 6,
+            fontSize: 9,
+            letterSpacing: "0.08em",
+            textTransform: "uppercase",
+            padding: "3px 8px",
+            border: "1px solid var(--line-soft)",
+            borderRadius: 999,
+          }}
+        >
+          <span
+            aria-hidden
+            className="mo-pulse-presence"
+            style={{
+              width: 6,
+              height: 6,
+              borderRadius: 999,
+              background: "#3b9d6b",
+              boxShadow: "0 0 0 2px rgba(59,157,107,0.18)",
+            }}
+          />
+          open to work
         </span>
       </div>
       <div>
@@ -140,15 +156,15 @@ function HeroTile() {
         <p
           style={{
             flex: 1,
-            maxWidth: 420,
+            maxWidth: 440,
             margin: 0,
             fontSize: 14,
             lineHeight: 1.45,
             color: "var(--ink-2)",
           }}
         >
-          sysadmin-by-trade developer in santa cruz. building agent-friendly
-          infra on xrpl evm — openclaw deploys, mcp servers, cli tooling.
+          ops generalist + dev in santa cruz. four years on hybrid azure / m365
+          / on-prem sysadmin. side-building agent automation + mcp tooling.
         </p>
         <div
           style={{
@@ -304,12 +320,20 @@ function ProjectTile({
           ↗
         </span>
       </div>
-      <div
-        className="preview"
-        style={{ height: featured ? 110 : 64, marginTop: 8 }}
-      >
-        {project.id} · preview
-      </div>
+      <img
+        src={`/previews/${project.id}.jpg?v=2`}
+        alt={`${project.name} preview`}
+        style={{
+          height: featured ? 110 : 64,
+          width: "100%",
+          objectFit: "cover",
+          objectPosition: "center 35%",
+          marginTop: 8,
+          border: "1.25px solid var(--line)",
+          borderRadius: 4,
+          background: "#fff",
+        }}
+      />
       <div style={{ marginTop: "auto" }}>
         <div
           className="hand"
@@ -367,15 +391,15 @@ function AboutTile() {
       >
         <span className="mono" style={{ fontSize: 10, color: "var(--ink-3)" }}>ABOUT</span>
         <span className="mono" style={{ fontSize: 9, color: "var(--ink-3)" }}>
-          sysadmin · dev · ai agents
+          sysadmin · dev · ops
         </span>
       </div>
       <div
         className="hand"
         style={{ fontSize: 22, marginTop: 6, lineHeight: 1.15 }}
       >
-        sysadmin by trade in the bay.<br />
-        side quest: agentic infra on xrpl evm.
+        4 years sysadmin in the bay — hybrid azure / m365 / on-prem.<br />
+        side-building agent automation on xrpl evm.
       </div>
     </>
   );
@@ -405,6 +429,14 @@ function ContactTile() {
       >
         <a href="mailto:shane@shanefurtado.com" style={{ fontSize: 12 }}>
           shane@shanefurtado.com
+        </a>
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noreferrer"
+          style={{ fontSize: 11, color: "var(--ink)" }}
+        >
+          resume.pdf ↗
         </a>
         <a
           href="https://github.com/ShaneOnChain"

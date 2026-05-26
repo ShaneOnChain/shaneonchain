@@ -26,12 +26,12 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "shane on chain",
   description:
-    "developer · santa cruz · building agent-friendly infra on xrpl evm.",
+    "sysadmin + developer in santa cruz, ca. building agent automation on the side.",
   metadataBase: new URL("https://shaneonchain.com"),
   openGraph: {
     title: "shane on chain",
     description:
-      "developer · santa cruz · building agent-friendly infra on xrpl evm.",
+      "sysadmin + developer in santa cruz, ca. building agent automation on the side.",
     url: "https://shaneonchain.com",
     siteName: "shane on chain",
     type: "website",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "shane on chain",
     description:
-      "developer · santa cruz · building agent-friendly infra on xrpl evm.",
+      "sysadmin + developer in santa cruz, ca. building agent automation on the side.",
     creator: "@shaneonchain",
   },
 };
