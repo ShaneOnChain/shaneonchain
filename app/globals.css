@@ -189,6 +189,6 @@ main {
   .bento .now     { grid-column: span 1; grid-row: span 1; }
   .bento .focus   { grid-column: span 1; grid-row: span 1; }
   .bento .project { grid-column: span 2; grid-row: span 2; }
-  .bento .about   { grid-column: 1 / -1; grid-row: span 1; }
+  .bento .about   { grid-column: 1 / -1; grid-row: span 2; }
   .bento .contact { grid-column: 1 / -1; grid-row: span 1; }
 }

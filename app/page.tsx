@@ -32,10 +32,10 @@ const PROJECTS = [
 ];
 
 const FOCUS = [
-  "systems + networking",
-  "identity + endpoints",
-  "mcp / cli tooling",
-  "ai agents · xrpl evm",
+  "linux + windows servers",
+  "microsoft 365 + azure",
+  "networking",
+  "ai + automation",
 ];
 
 // ─── Header (above the bento) ────────────────────────────────
@@ -91,42 +91,7 @@ function Header() {
 function HeroTile() {
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "flex-start",
-        }}
-      >
-        <span className="tag">sysadmin · developer · santa cruz, ca</span>
-        <span
-          className="mono"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: 6,
-            fontSize: 9,
-            letterSpacing: "0.08em",
-            textTransform: "uppercase",
-            padding: "3px 8px",
-            border: "1px solid var(--line-soft)",
-            borderRadius: 999,
-          }}
-        >
-          <span
-            aria-hidden
-            className="mo-pulse-presence"
-            style={{
-              width: 6,
-              height: 6,
-              borderRadius: 999,
-              background: "#3b9d6b",
-              boxShadow: "0 0 0 2px rgba(59,157,107,0.18)",
-            }}
-          />
-          open to work
-        </span>
-      </div>
+      <span className="tag">developer · sysadmin · santa cruz, ca</span>
       <div>
         <div
           className="h1"
@@ -163,8 +128,8 @@ function HeroTile() {
             color: "var(--ink-2)",
           }}
         >
-          ops generalist + dev in santa cruz. four years on hybrid azure / m365
-          / on-prem sysadmin. side-building agent automation + mcp tooling.
+          developer + sysadmin in santa cruz. building agent infrastructure on
+          xrpl evm — mcp servers, cli tools, the deploy stack.
         </p>
         <div
           style={{
@@ -320,11 +285,22 @@ function ProjectTile({
           ↗
         </span>
       </div>
-      <div style={{ marginTop: "auto" }}>
+
+      <div
+        style={{
+          flex: 1,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          minHeight: 0,
+        }}
+      >
         <div
           className="hand"
           style={{
-            fontSize: featured ? 56 : 44,
+            fontSize: featured
+              ? "clamp(48px, 6.5vw, 72px)"
+              : "clamp(38px, 5vw, 56px)",
             lineHeight: 0.95,
           }}
         >
@@ -332,16 +308,18 @@ function ProjectTile({
         </div>
         <div
           className="mono"
-          style={{ fontSize: 10, color: "var(--ink-3)", marginTop: 3 }}
+          style={{ fontSize: 10, color: "var(--ink-3)", marginTop: 4 }}
         >
           {project.domain}
         </div>
+      </div>
+
+      <div>
         <div
           style={{
             fontSize: 11,
             color: "var(--ink-2)",
-            marginTop: 6,
-            lineHeight: 1.3,
+            lineHeight: 1.35,
           }}
         >
           {featured ? project.blurb : project.tag}
@@ -349,7 +327,7 @@ function ProjectTile({
         {featured && (
           <div
             style={{
-              marginTop: 10,
+              marginTop: 8,
               display: "flex",
               gap: 5,
               flexWrap: "wrap",
@@ -382,10 +360,15 @@ function AboutTile() {
       </div>
       <div
         className="hand"
-        style={{ fontSize: 22, marginTop: 6, lineHeight: 1.15 }}
+        style={{
+          fontSize: "clamp(18px, 2.2vw, 22px)",
+          marginTop: 6,
+          lineHeight: 1.2,
+        }}
       >
-        4 years sysadmin in the bay — hybrid azure / m365 / on-prem.<br />
-        side-building agent automation on xrpl evm.
+        by day: sysadmin in the bay — servers, microsoft 365, networking.
+        <br />
+        by night: agent automation on xrpl evm.
       </div>
     </>
   );
@@ -413,22 +396,14 @@ function ContactTile() {
           marginTop: 8,
         }}
       >
-        <a href="mailto:shane@shanefurtado.com" style={{ fontSize: 12 }}>
-          shane@shanefurtado.com
-        </a>
-        <a
-          href="/resume.pdf"
-          target="_blank"
-          rel="noreferrer"
-          style={{ fontSize: 11, color: "var(--ink)" }}
-        >
-          resume.pdf ↗
+        <a href="mailto:shane@shaneonchain.com" style={{ fontSize: 12 }}>
+          shane@shaneonchain.com
         </a>
         <a
           href="https://github.com/ShaneOnChain"
           target="_blank"
           rel="noreferrer"
-          style={{ fontSize: 10, color: "var(--ink-3)" }}
+          style={{ fontSize: 11, color: "var(--ink-2)" }}
         >
           github — @ShaneOnChain
         </a>
@@ -436,7 +411,7 @@ function ContactTile() {
           href="https://x.com/shaneonchain"
           target="_blank"
           rel="noreferrer"
-          style={{ fontSize: 10, color: "var(--ink-3)" }}
+          style={{ fontSize: 11, color: "var(--ink-2)" }}
         >
           x — @shaneonchain
         </a>
