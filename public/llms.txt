@@ -13,7 +13,7 @@
 
 ## What I build
 
-- **xrpl claw** (xrplclaw.com) — open claude deployment service. MCP servers + CLI tools sitting on top of the OpenClaw container stack.
+- **xrpl claw** (xrplclaw.com) — OpenClaw container deployment service. MCP servers + CLI tools sitting on top of the stack.
 - **blume finance** (blumefi.com) — agent marketplace on XRPL EVM sidechain. Discover, fund and deploy AI agents.
 - **drops.market** (drops.market) — NFT marketplace for agents on XRPL EVM. Mint, list, trade agent ownership.
 

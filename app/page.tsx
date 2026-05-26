@@ -4,9 +4,7 @@ const PROJECTS = [
     name: "xrpl claw",
     domain: "xrplclaw.com",
     href: "https://xrplclaw.com",
-    tag: "open claude deploy · mcp · cli",
-    blurb:
-      "open claude deployment service. mcp servers + cli tools sitting on top of the stack.",
+    description: "openclaw container deployment. mcp + cli on top.",
     color: "claw" as const,
   },
   {
@@ -14,9 +12,7 @@ const PROJECTS = [
     name: "blume finance",
     domain: "blumefi.com",
     href: "https://blumefi.com",
-    tag: "agent marketplace · xrpl evm sidechain",
-    blurb:
-      "first agent marketplace. discover, fund and deploy ai agents on xrpl evm.",
+    description: "agent marketplace on xrpl evm.",
     color: "blume" as const,
   },
   {
@@ -24,9 +20,7 @@ const PROJECTS = [
     name: "drops.market",
     domain: "drops.market",
     href: "https://drops.market",
-    tag: "nft marketplace for agents · xrpl evm",
-    blurb:
-      "nft marketplace for agents. mint, list, trade agent ownership.",
+    description: "nft marketplace on xrpl evm.",
     color: "drops" as const,
   },
 ];
@@ -259,11 +253,9 @@ function FocusTile() {
 function ProjectTile({
   project,
   idx,
-  featured,
 }: {
   project: (typeof PROJECTS)[number];
   idx: number;
-  featured?: boolean;
 }) {
   return (
     <>
@@ -271,17 +263,16 @@ function ProjectTile({
         style={{
           display: "flex",
           justifyContent: "space-between",
-          alignItems: "flex-start",
+          alignItems: "center",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
           <span className={`dot ${project.color}`} />
-          <span className="mono" style={{ fontSize: 9, color: "var(--ink-3)" }}>
+          <span className="mono" style={{ fontSize: 10, color: "var(--ink-3)" }}>
             0{idx + 1}
-            {featured ? " · featured" : ""}
           </span>
         </div>
-        <span className="mono" style={{ fontSize: 11, color: "var(--ink-3)" }}>
+        <span className="mono" style={{ fontSize: 12, color: "var(--ink-3)" }}>
           ↗
         </span>
       </div>
@@ -298,9 +289,7 @@ function ProjectTile({
         <div
           className="hand"
           style={{
-            fontSize: featured
-              ? "clamp(48px, 6.5vw, 72px)"
-              : "clamp(38px, 5vw, 56px)",
+            fontSize: "clamp(36px, 4.2vw, 50px)",
             lineHeight: 0.95,
           }}
         >
@@ -308,36 +297,25 @@ function ProjectTile({
         </div>
         <div
           className="mono"
-          style={{ fontSize: 10, color: "var(--ink-3)", marginTop: 4 }}
+          style={{
+            fontSize: 11,
+            color: "var(--ink-3)",
+            marginTop: 6,
+          }}
         >
           {project.domain}
         </div>
-      </div>
-
-      <div>
         <div
           style={{
-            fontSize: 11,
+            fontSize: 12,
             color: "var(--ink-2)",
-            lineHeight: 1.35,
+            lineHeight: 1.4,
+            marginTop: 10,
+            maxWidth: "30ch",
           }}
         >
-          {featured ? project.blurb : project.tag}
+          {project.description}
         </div>
-        {featured && (
-          <div
-            style={{
-              marginTop: 8,
-              display: "flex",
-              gap: 5,
-              flexWrap: "wrap",
-            }}
-          >
-            {project.tag.split(" · ").map((t) => (
-              <span key={t} className="chip" style={{ fontSize: 9 }}>{t}</span>
-            ))}
-          </div>
-        )}
       </div>
     </>
   );
@@ -446,7 +424,7 @@ export default function Page() {
             className={`cell project ${p.color}`}
             style={{ textDecoration: "none", color: "inherit" }}
           >
-            <ProjectTile project={p} idx={i} featured={i === 0} />
+            <ProjectTile project={p} idx={i} />
           </a>
         ))}
 
