@@ -1,6 +1,6 @@
 # shane on chain
 
-> Developer in Santa Cruz, CA. Building agent-friendly infrastructure on XRPL EVM — OpenClaw deployments, MCP servers, and CLI tooling.
+> Sysadmin + developer in Santa Cruz, CA. Building OpenClaw — container hosting for AI agents. Plus websites and automation tooling.
 
 ## Identity
 
@@ -13,9 +13,9 @@
 
 ## What I build
 
-- **xrpl claw** (xrplclaw.com) — OpenClaw container deployment service. MCP servers + CLI tools sitting on top of the stack.
-- **blume finance** (blumefi.com) — agent marketplace on XRPL EVM sidechain. Discover, fund and deploy AI agents.
-- **drops.market** (drops.market) — NFT marketplace for agents on XRPL EVM. Mint, list, trade agent ownership.
+- **xrpl claw** (xrplclaw.com) — OpenClaw container hosting for AI agents. MCP servers + CLI tools on top of the stack.
+- **blume finance** (blumefi.com) — Marketplace for AI agents. Discover, fund, deploy.
+- **drops.market** (drops.market) — Ownership layer for AI agents. Mint, list, trade as NFTs.
 
 ## Stack
 

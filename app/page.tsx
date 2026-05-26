@@ -4,7 +4,7 @@ const PROJECTS = [
     name: "xrpl claw",
     domain: "xrplclaw.com",
     href: "https://xrplclaw.com",
-    description: "openclaw container deployment. mcp + cli on top.",
+    description: "openclaw hosting for ai agents.",
     color: "claw" as const,
   },
   {
@@ -12,7 +12,7 @@ const PROJECTS = [
     name: "blume finance",
     domain: "blumefi.com",
     href: "https://blumefi.com",
-    description: "agent marketplace on xrpl evm.",
+    description: "marketplace for ai agents.",
     color: "blume" as const,
   },
   {
@@ -20,7 +20,7 @@ const PROJECTS = [
     name: "drops.market",
     domain: "drops.market",
     href: "https://drops.market",
-    description: "nft marketplace on xrpl evm.",
+    description: "ownership layer for ai agents.",
     color: "drops" as const,
   },
 ];
@@ -28,9 +28,10 @@ const PROJECTS = [
 const FOCUS = [
   "linux + windows servers",
   "microsoft 365 + azure",
-  "networking",
+  "web development",
   "ai + automation",
 ];
+
 
 // ─── Header (above the bento) ────────────────────────────────
 function Header() {
@@ -85,7 +86,7 @@ function Header() {
 function HeroTile() {
   return (
     <>
-      <span className="tag">developer · sysadmin · santa cruz, ca</span>
+      <span className="tag">sysadmin · developer · santa cruz, ca</span>
       <div>
         <div
           className="h1"
@@ -122,8 +123,8 @@ function HeroTile() {
             color: "var(--ink-2)",
           }}
         >
-          developer + sysadmin in santa cruz. building the deploy +
-          marketplace stack for ai agents on xrpl.
+          sysadmin in santa cruz. building openclaw — container hosting for
+          ai agents. plus websites + automation.
         </p>
         <div
           style={{
@@ -187,7 +188,7 @@ function NowTile() {
         className="hand"
         style={{ fontSize: 26, lineHeight: 1.05, marginTop: 8 }}
       >
-        shipping xrplclaw — agent infra on xrpl evm.
+        shipping xrplclaw — ai agent hosting.
       </div>
       <div
         className="mono"
@@ -346,7 +347,7 @@ function AboutTile() {
       >
         by day: sysadmin in the bay — servers, microsoft 365, networking.
         <br />
-        by night: agent automation on xrpl evm.
+        by night: openclaw + websites + automation.
       </div>
     </>
   );
