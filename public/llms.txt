@@ -1,0 +1,30 @@
+# shane on chain
+
+> Developer in Santa Cruz, CA. Building agent-friendly infrastructure on XRPL EVM — OpenClaw deployments, MCP servers, and CLI tooling.
+
+## Identity
+
+- Real name: Shane Furtado
+- Handle: @shaneonchain (github + x/twitter)
+- Email: shane@shanefurtado.com
+- Location: Santa Cruz County, California
+- Background: 4+ years systems administration (hybrid Microsoft Azure / on-prem environments at manufacturing + engineering orgs)
+- Currently: independent, building AI-automation tooling under 1337 Labs LLC
+
+## What I build
+
+- **xrpl claw** (xrplclaw.com) — open claude deployment service. MCP servers + CLI tools sitting on top of the OpenClaw container stack.
+- **blume finance** (blumefi.com) — agent marketplace on XRPL EVM sidechain. Discover, fund and deploy AI agents.
+- **drops.market** (drops.market) — NFT marketplace for agents on XRPL EVM. Mint, list, trade agent ownership.
+
+## Stack
+
+- TypeScript / Next.js / Node.js front-ends + APIs
+- Linux server admin (Hetzner, systemd, Docker, PM2)
+- Claude Code / Anthropic Agent SDK, Model Context Protocol (MCP) servers
+- XRPL, XRPL EVM sidechain, Evernode
+- Vercel for deploys, GitHub for source
+
+## Hiring + collaboration
+
+Open to mid Sysadmin / IT Engineer roles in the Santa Cruz / South Bay area (May 2026+). DM on X or email for collaboration on agent infrastructure, MCP tooling, or XRPL-EVM projects.
