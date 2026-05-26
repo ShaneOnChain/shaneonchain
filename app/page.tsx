@@ -320,25 +320,11 @@ function ProjectTile({
           ↗
         </span>
       </div>
-      <img
-        src={`/previews/${project.id}.jpg?v=3`}
-        alt={`${project.name} preview`}
-        style={{
-          height: featured ? 110 : 64,
-          width: "100%",
-          objectFit: "cover",
-          objectPosition: "center",
-          marginTop: 8,
-          border: "1.25px solid var(--line)",
-          borderRadius: 4,
-          background: "#fff",
-        }}
-      />
       <div style={{ marginTop: "auto" }}>
         <div
           className="hand"
           style={{
-            fontSize: featured ? 40 : 32,
+            fontSize: featured ? 56 : 44,
             lineHeight: 0.95,
           }}
         >
